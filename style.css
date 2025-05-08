@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Medula One";
+  src: url(fonts/MedulaOne-Regular.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-family: "Medula One";
+  font-size: 20vw;
+  color: #2c7f96;
+  margin: 0;
+  margin-top: 20vh;
+}
+.heroimage {
+  width: 100%;
+  height: 100vh;
+  background-color: #6cd9dd;
+  display: flex;
+  justify-content: center;
+}
+.headimage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.mainimage {
+  position: absolute;
+  width: 90vw;
+  height: auto;
+  bottom: -52vw;
+}
+.eyes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.eyes .left {
+  position: absolute;
+  width: 10vw;
+  height: auto;
+  left: 39vw;
+  bottom: 5vw;
+}
+.eyes .right {
+  position: absolute;
+  width: 10vw;
+  height: auto;
+  right: 36.5vw;
+  bottom: 5vw;
+}
+.iriscontainer {
+  mask-size: auto 10vw;
+  position: absolute;
+  mask-image: url("images/Vector 1.svg");
+  mask-size: auto 10vw;
+  /* mask-size: 100% 100%; */
+  /* width: 100%;
+  height: 100%; */
+}
+.leftiris {
+  left: 39vw;
+  bottom: 5.6vw;
+}
+.rightiris {
+  right: 41.5vw;
+  bottom: 5.6vw;
+}
+.irisleft {
+  height: 5vw;
+  width: auto;
+
+  /* transform: translate(50%, 50%); */
+}
+.irisright {
+  height: 5vw;
+  width: auto;
+
+  /* transform: translate(50%, 50%); */
+}
