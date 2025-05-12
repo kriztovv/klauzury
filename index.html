@@ -9,11 +9,22 @@
       href="https://fonts.googleapis.com/css2?family=Medula+One&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kavoon&family=League+Gothic&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-  <body>
-    <div class="heroimage">
+  <body id="body">
+    <div id="grain"></div>
+    <div class="heroimage" id="heroimage">
       <nav>
         <a href=""></a>
         <a href=""></a>
@@ -40,5 +51,34 @@
         </div>
       </div>
     </div>
+    <div class="aboutpage">
+      <h2>About.</h2>
+      <div class="oval1">
+        <img src="images/camera_img.png" alt="" />
+      </div>
+      <div class="oval2"><img src="images/woman_img.png" alt="" /></div>
+
+      <p>
+        Lorem ipsum dolor sit amet, <br /><br />consectetur adipiscing elit.
+        Cras sit Quisque nec libero pellentesque, euismod nisl in, auctor
+        leo.<br /><br />
+        Suspendisse aliquet pharetra quam, bibendum suscipit odio pharetra
+        ullamcorper. Proin.
+      </p>
+    </div>
+    <img class="wall" src="images/wall.png" alt="" />
+    <div class="projects"></div>
+    <script src="grained.js"></script>
+    <script>
+      grained("#grain", {
+        animate: true,
+        patternWidth: 1000,
+        patternHeight: 1000,
+        grainOpacity: 0.3,
+        grainDensity: 1,
+        grainWidth: 1,
+        grainHeight: 1,
+      });
+    </script>
   </body>
 </html>
