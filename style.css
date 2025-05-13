@@ -3,7 +3,7 @@
   src: url(fonts/MedulaOne-Regular.ttf);
 }
 html {
-  filter: saturate(200%);
+  filter: saturate(150%);
 }
 #grain {
   width: 100%;
@@ -12,7 +12,8 @@ html {
   z-index: 9999;
   pointer-events: none;
 }
-body {
+body,
+* {
   margin: 0;
   padding: 0;
 }
@@ -84,7 +85,8 @@ h1 {
 .irisleft {
   height: 5vw;
   width: auto;
-
+  position: relative;
+  transition: transform 0.1s ease-out;
   /* transform: translate(50%, 50%); */
 }
 .irisright {
@@ -149,8 +151,37 @@ h2 {
 .wall {
   width: 100%;
   height: auto;
-  position: absolute;
-  /* top: calc(250vh - 0.7142 * 100vw); */
-  top: 220vh;
   background-color: #f0f3ae;
+}
+.projects {
+  background-image: url(images/picnic.png);
+  width: 100%;
+  /* height: calc(0.9 * 100vw); */
+  height: 150vh;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.projects .img1,
+.projects .img2,
+.projects .img3 {
+  background-color: lightgray;
+  width: 15vw;
+  height: 20vw;
+  position: relative;
+}
+.projects .img1 {
+  top: 25vh;
+  left: 30vw;
+  transform: rotateZ(-30deg);
+}
+.projects .img2 {
+  top: 20vh;
+  left: 60vw;
+  transform: rotateZ(20deg);
+}
+.projects .img3 {
+  top: 15vh;
+  left: 35vw;
+  transform: rotateZ(-10deg);
 }
