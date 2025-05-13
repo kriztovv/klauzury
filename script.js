@@ -5,7 +5,7 @@ const sensitivity = 0.08;
 
 // per-element offsets in px
 const offsets = [
-  { el: left, x: 80, y: 20 },
+  { el: left, x: 60, y: 20 },
   { el: right, x: 40, y: 20 },
 ];
 
