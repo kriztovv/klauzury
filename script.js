@@ -73,6 +73,6 @@ document.addEventListener("mousemove", (e) => {
     const ty = baseY + ny * maxY * sensitivity;
 
     // Apply
-    el.style.transform = `translate(${tx}px, ${ty}px)`;
+    el.style.transform = `translate(${tx}px, ${ty + (1 / 100) * vh * -1}px)`;
   });
 });
