@@ -152,10 +152,10 @@ h2 {
 .projects .img1,
 .projects .img2,
 .projects .img3 {
-  background-color: lightgray;
   width: 15vw;
-  height: 20vw;
+  height: auto;
   position: relative;
+  box-shadow: 2px 5px 31px -1px rgba(0, 0, 0, 0.75);
 }
 .projects .img1 {
   top: 25vh;

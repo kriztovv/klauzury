@@ -68,3 +68,36 @@ document.addEventListener("mousemove", (e) => {
     el.style.transform = `translate(${tx}px, ${ty + (1 / 100) * vh * -1}px)`;
   });
 });
+
+//tilt
+const tiltElements = document.querySelectorAll(".projimg");
+
+tiltElements.forEach((el) => {
+  // Get the computed transform from CSS (e.g., rotateZ(-30deg))
+  const computedTransform = getComputedStyle(el).transform;
+
+  // If it's not "none", apply it directly to inline style before VanillaTilt kicks in
+  if (computedTransform !== "none") {
+    el.style.transform = computedTransform;
+  }
+
+  // Save original transform to restore on mouseleave
+  el.dataset.originalTransform = computedTransform;
+});
+
+// Initialize VanillaTilt after setting initial transform
+VanillaTilt.init(tiltElements, {
+  scale: 1.5,
+  glare: true,
+  "max-glare": 1,
+  reverse: true,
+});
+
+// Restore transform on mouseleave
+tiltElements.forEach((el) => {
+  el.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+      el.style.transform = el.dataset.originalTransform || "";
+    }, 0);
+  });
+});
