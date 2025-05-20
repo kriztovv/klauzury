@@ -4,19 +4,18 @@
 // e.g. 1 = full travel, <1 slows movement, >1 exaggerates it
 const sensitivity = 2;
 
-// Define each iris’s “rest” position and max travel as fractions of its own size.
 const irisConfigs = [
   {
     selector: "#irisleft",
-    baseXPct: 0.6, // 60% from left when cursor is centered
-    baseYPct: 0.05, // 20% from top  when cursor is centered
-    maxMoveXPct: 0.3, // ±30% of iris width
-    maxMoveYPct: 0.25, // ±25% of iris height
+    baseXPct: 0.6,
+    baseYPct: 0.02,
+    maxMoveXPct: 0.3,
+    maxMoveYPct: 0.25,
   },
   {
     selector: "#irisright",
     baseXPct: 0.4,
-    baseYPct: 0.05,
+    baseYPct: 0.02,
     maxMoveXPct: 0.25,
     maxMoveYPct: 0.25,
   },
