@@ -1,35 +1,28 @@
-// iris-follow.js
-// This script makes two “iris” elements follow the cursor in a normalized, responsive way.
-
-// ————————————————
 // CONFIGURATION
-// ————————————————
 
 // Sensitivity scaling (if you want extra damping)
 // e.g. 1 = full travel, <1 slows movement, >1 exaggerates it
-const sensitivity = 1;
+const sensitivity = 2;
 
 // Define each iris’s “rest” position and max travel as fractions of its own size.
 const irisConfigs = [
   {
     selector: "#irisleft",
     baseXPct: 0.6, // 60% from left when cursor is centered
-    baseYPct: 0.2, // 20% from top  when cursor is centered
+    baseYPct: 0.05, // 20% from top  when cursor is centered
     maxMoveXPct: 0.3, // ±30% of iris width
     maxMoveYPct: 0.25, // ±25% of iris height
   },
   {
     selector: "#irisright",
     baseXPct: 0.4,
-    baseYPct: 0.2,
+    baseYPct: 0.05,
     maxMoveXPct: 0.25,
     maxMoveYPct: 0.25,
   },
 ];
 
-// ————————————————
 // INITIALIZATION
-// ————————————————
 
 // Cache DOM elements
 const irises = irisConfigs.map((cfg) => ({

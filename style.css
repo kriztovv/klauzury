@@ -41,9 +41,9 @@ h1 {
 }
 .mainimage {
   position: absolute;
-  width: 90vw;
+  width: max(90vw, calc(90 * 13px));
   height: auto;
-  bottom: -52vw;
+  bottom: min(-52vw, calc(-52 * 13px));
 }
 .eyes {
   position: absolute;
@@ -51,39 +51,30 @@ h1 {
   height: 100%;
   overflow: hidden;
 }
-.eyes .left {
+.eye {
   position: absolute;
-  width: 10vw;
-  height: 7vw;
-  left: 39vw;
-  bottom: 5vw;
+  width: max(10vw, calc(10 * 13px));
+  height: max(7vw, calc(7 * 13px));
+  bottom: max(5vw, calc(5 * 13px));
   background-image: url("images/Vector1.svg");
-  background-size: 10vw;
+  background-size: max(10vw, calc(10 * 13px));
   background-position: center;
   background-repeat: no-repeat;
   mask-image: url("images/Vector1.svg");
   mask-position: center;
-  mask-size: 10vw;
-  mask-repeat: no-repeat;
-}
-.eyes .right {
-  position: absolute;
-  width: 10vw;
-  height: 7vw;
-  right: 36.5vw;
-  bottom: 5vw;
-  background-image: url("images/Vector1.svg");
-  background-size: 10vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  mask-image: url("images/Vector1.svg");
-  mask-position: center;
-  mask-size: 10vw;
+  mask-size: max(10vw, calc(10 * 13px));
   mask-repeat: no-repeat;
 }
 
+.eyes .left {
+  left: 39vw;
+}
+.eyes .right {
+  right: 36.5vw;
+}
+
 .iris {
-  height: 5vw;
+  height: max(5vw, calc(5 * 13px));
   width: auto;
   position: relative;
   transition: transform 0.1s ease-out;
@@ -201,4 +192,19 @@ h2 {
   border-radius: 50%;
   margin-top: 25vh;
   margin-left: 17vw;
+}
+@media screen and (max-width: 1300px) {
+  .eyes .left {
+    left: calc(50% + (1300px * 0.39 - 650px));
+  }
+  .eyes .right {
+    right: calc(50% + (1300px * 0.365 - 650px));
+  }
+}
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 40vw;
+    text-align: center;
+    margin-top: 10vh;
+  }
 }
