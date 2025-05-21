@@ -154,34 +154,36 @@ h2 {
   background-image: url(images/picnic.png);
   width: 100%;
   /* height: calc(0.9 * 100vw); */
-  height: 150vh;
+  /* height: 170vh; */
   background-size: 100%;
   background-position: center;
   background-repeat: repeat;
 }
-.projects .img1,
-.projects .img2,
-.projects .img3 {
-  width: 15vw;
-  height: auto;
+.container {
+  padding-top: 10vh;
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* gap: 30vh; */
+}
+.projimg {
+  width: 30vh;
+  height: calc(30vh * 1.2816);
   position: relative;
   box-shadow: 2px 5px 31px -1px rgba(0, 0, 0, 0.75);
-
   z-index: 101;
+  margin: 15vh 15vh;
 }
+
 .projects .img1 {
-  top: 25vh;
-  left: 30vw;
   transform: rotateZ(-30deg);
 }
 .projects .img2 {
-  top: 20vh;
-  left: 60vw;
   transform: rotateZ(20deg);
 }
 .projects .img3 {
-  top: 15vh;
-  left: 35vw;
   transform: rotateZ(-10deg);
 }
 #contact {
@@ -211,6 +213,11 @@ h2 {
   }
   .eyes .right {
     right: calc(50% + (1300px * 0.365 - 650px));
+  }
+}
+@media screen and (max-width: 1200px) {
+  .projects {
+    height: 250vh;
   }
 }
 @media screen and (max-width: 500px) {
