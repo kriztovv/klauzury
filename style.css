@@ -215,11 +215,7 @@ h2 {
     right: calc(50% + (1300px * 0.365 - 650px));
   }
 }
-@media screen and (max-width: 1200px) {
-  .projects {
-    height: 250vh;
-  }
-}
+
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 40vw;
