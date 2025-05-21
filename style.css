@@ -9,7 +9,7 @@ html {
   width: 100%;
   height: 100%;
   position: fixed !important;
-  z-index: 9999;
+  z-index: 100;
   pointer-events: none;
 }
 body,
@@ -38,6 +38,7 @@ h1 {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  z-index: 101;
 }
 .mainimage {
   position: absolute;
@@ -50,6 +51,7 @@ h1 {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: 102;
 }
 .eye {
   position: absolute;
@@ -94,6 +96,8 @@ h2 {
   font-weight: 100;
   margin: 3vw 10vw;
   color: #635f40;
+  position: sticky;
+  z-index: 101;
 }
 .oval1 {
   height: 60vh;
@@ -101,6 +105,8 @@ h2 {
   background-color: #794747;
   margin-left: 20vw;
   border-radius: 0 0 10vw 10vw;
+  position: sticky;
+  z-index: 101;
 }
 .oval2 {
   height: 65vh;
@@ -110,6 +116,8 @@ h2 {
   border-radius: 10vw;
   position: relative;
   top: -10vh;
+  position: sticky;
+  z-index: 101;
 }
 .aboutpage p {
   color: #794747;
@@ -119,6 +127,8 @@ h2 {
   margin-top: 5vh;
   font-size: 1.8vw;
   font-family: "Kavoon", serif;
+  position: sticky;
+  z-index: 101;
 }
 .oval2 img {
   width: 17vw;
@@ -156,6 +166,8 @@ h2 {
   height: auto;
   position: relative;
   box-shadow: 2px 5px 31px -1px rgba(0, 0, 0, 0.75);
+
+  z-index: 101;
 }
 .projects .img1 {
   top: 25vh;
@@ -179,7 +191,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
 }
-#contact h1 {
+#contact h2 {
   margin-top: 10vh;
   color: #406346;
 }
