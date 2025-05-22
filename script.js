@@ -72,6 +72,13 @@ document.addEventListener("mousemove", (e) => {
 //tilt
 const tiltElements = document.querySelectorAll(".projimg");
 
+// Initialize VanillaTilt after setting initial transform
+VanillaTilt.init(tiltElements, {
+  scale: 1.5,
+  glare: true,
+  "max-glare": 1,
+  reverse: true,
+});
 tiltElements.forEach((el) => {
   // Get the computed transform from CSS (e.g., rotateZ(-30deg))
   const computedTransform = getComputedStyle(el).transform;
@@ -84,15 +91,6 @@ tiltElements.forEach((el) => {
   // Save original transform to restore on mouseleave
   el.dataset.originalTransform = computedTransform;
 });
-
-// Initialize VanillaTilt after setting initial transform
-VanillaTilt.init(tiltElements, {
-  scale: 1.5,
-  glare: true,
-  "max-glare": 1,
-  reverse: true,
-});
-
 // Restore transform on mouseleave
 tiltElements.forEach((el) => {
   el.addEventListener("mouseleave", () => {
@@ -100,4 +98,43 @@ tiltElements.forEach((el) => {
       el.style.transform = el.dataset.originalTransform || "";
     }, 0);
   });
+});
+
+//gsap
+
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.matchMedia({
+  // mobile only
+  "(max-width: 500px)": function () {
+    const container = document.querySelector("#wallcontainer");
+    const wall = container.querySelector(".wall");
+
+    // how far to drag the image
+    const scrollDist = () => wall.scrollWidth - window.innerWidth;
+
+    // set up the tween + scrollTrigger
+    const tl = gsap.to(wall, {
+      x: () => -scrollDist(),
+      ease: "none",
+      scrollTrigger: {
+        trigger: container,
+        pin: true,
+        scrub: 1,
+        end: () => `+=${scrollDist()}`,
+      },
+    });
+
+    // optional: return a cleanup function so that if you ever
+    // switch out of this media-query, ScrollTriggers are killed
+    return () => {
+      tl.scrollTrigger.kill();
+      tl.kill();
+    };
+  },
+
+  // everything else (>=501px)—do nothing / kill any stray triggers
+  all: function () {
+    // nothing here, so no horizontal-scroll on desktop
+  },
 });
