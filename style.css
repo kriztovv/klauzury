@@ -92,7 +92,7 @@ h1 {
   background-color: #f0f3ae;
   flex-wrap: wrap;
 }
-h2 {
+.aboutpage h2 {
   font-family: "League Gothic", sans-serif;
   font-size: 15vw;
   font-weight: 100;
@@ -121,8 +121,8 @@ h2 {
   z-index: 101;
 }
 #abouttext {
-  margin-top: 5vh;
-  font-size: 3.5vw;
+  margin-top: 3vh;
+  font-size: 3vh;
 
   height: 20vw;
   position: sticky;
@@ -212,6 +212,59 @@ h2 {
   margin-top: 25vh;
   margin-left: 17vw;
 }
+.contact {
+  width: 100%;
+  height: 170vh;
+  display: flex;
+  background-color: #a6ebb5;
+  flex-wrap: wrap;
+}
+.contact h2 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 15vw;
+  font-weight: 100;
+  margin: 3vw 10vw;
+  color: #406346;
+  position: sticky;
+  z-index: 101;
+  height: 20vw;
+}
+#contacttext {
+  margin-top: 3vh;
+  font-size: 3vh;
+
+  height: 20vw;
+  position: relative;
+  top: -20vh;
+  z-index: 101;
+}
+.contact p {
+  color: #406346;
+  width: 40vw;
+  margin-top: 3vw;
+  margin-left: 5vw;
+  font-family: "Kavoon", serif;
+}
+.circle1 {
+  height: 40vw;
+  width: 40vw;
+  background-color: #2a4a4d;
+  margin-left: 10vw;
+  border-radius: 50%;
+  position: sticky;
+  z-index: 101;
+}
+.circle2 {
+  height: 40vw;
+  width: 40vw;
+  background-color: #2a4a4d;
+  margin-left: 5vw;
+  border-radius: 50%;
+
+  position: relative;
+  top: -10vh;
+  z-index: 101;
+}
 @media screen and (max-width: 1300px) {
   .eyes .left {
     left: calc(50% + (1300px * 0.39 - 650px));
@@ -265,28 +318,90 @@ h2 {
     top: calc(30vh - 30vw);
     border-radius: 0 0 15vw 15vw;
   }
-  h2 {
+  .aboutpage h2 {
     font-size: 25vw;
   }
   #abouttext {
     font-size: 5vw;
     line-height: 6.5vw;
   }
-  #p1 {
+  #abouttext #p1 {
     position: absolute;
     top: -30vh;
     left: -35vw;
   }
-  #p2 {
+  #abouttext #p2 {
     position: absolute;
     top: -13vh;
     left: -35vw;
     width: 80vw;
   }
-  #p3 {
+  #abouttext #p3 {
     position: absolute;
     top: 5vh;
     left: 0vw;
+  }
+  .container img {
+    width: 50vw;
+    height: auto;
+  }
+
+  /* contact */
+
+  .contact {
+    height: 100vh;
+    flex-shrink: 0;
+  }
+  .circle1 {
+    height: 35vw;
+    width: 35vw;
+    position: relative;
+    top: 17vh;
+  }
+  .circle2 {
+    height: 40vw;
+    width: 40vw;
+    position: relative;
+    top: 10vh;
+    left: 5vw;
+  }
+  .circle1 img {
+    width: 40vw;
+    height: auto;
+    position: relative;
+    top: calc(35vh - 40vw);
+    right: 5vw;
+  }
+  .circle2 img {
+    width: 30vw;
+    height: auto;
+    position: relative;
+    top: calc(30vh - 30vw);
+    border-radius: 0 0 15vw 15vw;
+  }
+  .contact h2 {
+    font-size: 25vw;
+    margin-right: 0;
+  }
+  #contacttext {
+    font-size: 5vw;
+    line-height: 6.5vw;
+  }
+  #contacttext #p1 {
+    position: absolute;
+    top: -10vh;
+    left: -35vw;
+  }
+  #contacttext #p2 {
+    position: absolute;
+    top: 9vh;
+    left: -35vw;
+    width: 80vw;
+  }
+  #contacttext #p3 {
+    position: absolute;
+    top: 25vh;
+    left: 10vw;
   }
   .container img {
     width: 50vw;
