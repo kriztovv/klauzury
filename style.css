@@ -33,7 +33,8 @@ h1 {
 }
 .headimage {
   position: absolute;
-  width: calc(100vw - 1px);
+  /* width: calc(100vw - 1px); */
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   display: flex;
@@ -48,7 +49,8 @@ h1 {
 }
 .eyes {
   position: absolute;
-  width: calc(100vw - 1px);
+  /* width: calc(100vw - 1px); */
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   z-index: 102;
@@ -118,16 +120,20 @@ h2 {
   top: -10vh;
   z-index: 101;
 }
+#abouttext {
+  margin-top: 5vh;
+  font-size: 3.5vw;
+
+  height: 20vw;
+  position: sticky;
+  z-index: 101;
+}
 .aboutpage p {
   color: #794747;
   width: 40vw;
-  height: 20vw;
+  margin-top: 3vw;
   margin-left: 10vw;
-  margin-top: 5vh;
-  font-size: 1.8vw;
   font-family: "Kavoon", serif;
-  position: sticky;
-  z-index: 101;
 }
 .oval2 img {
   width: 17vw;
@@ -227,5 +233,63 @@ h2 {
   .wall {
     width: auto;
     height: 100vh;
+  }
+  .aboutpage {
+    height: 100vh;
+    flex-shrink: 0;
+  }
+  .oval1 {
+    height: 35vh;
+    width: 30vw;
+    margin-left: 0vw;
+    border-radius: 0 0 15vw 15vw;
+  }
+  .oval2 {
+    height: 30vh;
+    width: 30vw;
+    margin-left: 10vw;
+    border-radius: 15vw;
+    top: 10vh;
+  }
+  .oval1 img {
+    width: 40vw;
+    height: auto;
+    position: relative;
+    top: calc(35vh - 40vw);
+    right: 5vw;
+  }
+  .oval2 img {
+    width: 30vw;
+    height: auto;
+    position: relative;
+    top: calc(30vh - 30vw);
+    border-radius: 0 0 15vw 15vw;
+  }
+  h2 {
+    font-size: 25vw;
+  }
+  #abouttext {
+    font-size: 5vw;
+    line-height: 6.5vw;
+  }
+  #p1 {
+    position: absolute;
+    top: -30vh;
+    left: -35vw;
+  }
+  #p2 {
+    position: absolute;
+    top: -13vh;
+    left: -35vw;
+    width: 80vw;
+  }
+  #p3 {
+    position: absolute;
+    top: 5vh;
+    left: 0vw;
+  }
+  .container img {
+    width: 50vw;
+    height: auto;
   }
 }
