@@ -1,3 +1,16 @@
+//paralax
+const el = document.querySelector(".h1");
+const speed = 0.3; // 0 = static, 1 = same speed as scroll
+
+window.addEventListener(
+  "scroll",
+  () => {
+    const y = window.scrollY;
+    // move element down at fraction of page scroll
+    el.style.top = `${y * speed}px`;
+  },
+  { passive: true }
+);
 // CONFIGURATION
 
 // Sensitivity scaling (if you want extra damping)

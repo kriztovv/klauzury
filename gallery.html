@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Medula+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kavoon&family=League+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>gallery</title>
+    <link rel="icon" type="image/x-icon" href="images/profile-modified.png" />
+  </head>
+
+  <body id="body">
+    <div id="grain"></div>
+    <div class="heroimage" id="heroimage">
+      <nav>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </nav>
+      <h1 class="h1">GALLERY</h1>
+
+      <div class="headimage">
+        <a class="link" href="index.html"></a>
+        <img class="mainimage" src="images/Layer 0.png" alt="" />
+      </div>
+      <div class="eyes">
+        <div class="eye , left">
+          <img class="iris" id="irisleft" src="images/Ellipse 1.svg" alt="" />
+        </div>
+
+        <div class="eye , right">
+          <img class="iris" id="irisright" src="images/Ellipse 1.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div id="gallery">
+      <div id="gallerycontainer">
+        <div id="smallpaintings">
+          <img src="images/paintings/painting_digital1.png" alt="" />
+          <img src="images/paintings/painting_digital2.png" alt="" />
+          <img src="images/paintings/painting_digital3.png" alt="" />
+          <img src="images/paintings/painting_flowers.png" alt="" />
+          <img src="images/paintings/painting_pencil1.png" alt="" />
+          <img src="images/paintings/painting_skull.png" alt="" />
+
+          <img src="images/paintings/painting_hawk.png" alt="" />
+          <img src="images/paintings/painting_sea.png" alt="" />
+          <img src="images/paintings/painting_portrait1.png" alt="" />
+
+          <img src="images/paintings/painting_stilllife1.png" alt="" />
+          <img src="images/paintings/painting_pulpfiction.png" alt="" />
+
+          <img src="images/paintings/painting_stilllife2.png" alt="" />
+          <img src="images/paintings/painting_stilllifecolor.png" alt="" />
+        </div>
+        <img id="bigpainting" src="images/paintings/painting_juno.png" alt="" />
+      </div>
+    </div>
+    <div id="ground"></div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+    <script>
+      kofiWidgetOverlay.draw("kriztov", {
+        type: "floating-chat",
+        "floating-chat.donateButton.text": "Support me",
+        "floating-chat.donateButton.background-color": "#794747",
+        "floating-chat.donateButton.text-color": "#fff",
+      });
+    </script>
+    <script src="grained.js"></script>
+    <script>
+      grained("#grain", {
+        animate: true,
+        patternWidth: 1000,
+        patternHeight: 1000,
+        grainOpacity: 0.25,
+        grainDensity: 1,
+        grainWidth: 1,
+        grainHeight: 1,
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
