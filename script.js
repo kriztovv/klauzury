@@ -1,5 +1,5 @@
 //paralax
-const el = document.querySelector(".h1");
+const el = document.querySelector(".title");
 const speed = 0.3; // 0 = static, 1 = same speed as scroll
 
 window.addEventListener(
