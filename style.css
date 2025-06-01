@@ -486,9 +486,6 @@ h3 {
   }
 }
 @media screen and (max-width: 800px) {
-  #contacttext {
-    /* top: -50vh !important; */
-  }
   .contact {
     height: 100vh !important;
   }
