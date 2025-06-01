@@ -562,8 +562,6 @@ h3 {
     width: 50vw;
     height: auto;
   }
-  #footer h3 {
-  }
 
   /* contact */
   .contact {
@@ -578,6 +576,9 @@ h3 {
     top: -20vh;
     left: -40vw;
     width: 70vw;
+  }
+  #contacttext {
+    top: -3vh;
   }
 
   .email {
