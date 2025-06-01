@@ -22,7 +22,7 @@ const irisConfigs = [
     selector: "#irisleft",
     baseXPct: 0.6,
     baseYPct: 0.02,
-    maxMoveXPct: 0.3,
+    maxMoveXPct: 0.25,
     maxMoveYPct: 0.25,
   },
   {
