@@ -85,32 +85,77 @@ document.addEventListener("mousemove", (e) => {
 //tilt
 const tiltElements = document.querySelectorAll(".projimg");
 
-// Initialize VanillaTilt after setting initial transform
-VanillaTilt.init(tiltElements, {
-  scale: 1.5,
-  glare: true,
-  "max-glare": 1,
-  reverse: true,
-});
-tiltElements.forEach((el) => {
-  // Get the computed transform from CSS (e.g., rotateZ(-30deg))
-  const computedTransform = getComputedStyle(el).transform;
+// Helper: initialize VanillaTilt on all .projimg
+function enableTilt() {
+  // If already initialized, don’t re‐initialize
+  if (tiltElements[0] && tiltElements[0].vanillaTilt) return;
 
-  // If it's not "none", apply it directly to inline style before VanillaTilt kicks in
-  if (computedTransform !== "none") {
-    el.style.transform = computedTransform;
-  }
-
-  // Save original transform to restore on mouseleave
-  el.dataset.originalTransform = computedTransform;
-});
-// Restore transform on mouseleave
-tiltElements.forEach((el) => {
-  el.addEventListener("mouseleave", () => {
-    setTimeout(() => {
-      el.style.transform = el.dataset.originalTransform || "";
-    }, 0);
+  // Save original transforms before VanillaTilt mutates them
+  tiltElements.forEach((el) => {
+    const computedTransform = getComputedStyle(el).transform;
+    if (computedTransform !== "none") {
+      el.style.transform = computedTransform;
+    }
+    el.dataset.originalTransform = computedTransform;
   });
+
+  // Init VanillaTilt
+  VanillaTilt.init(tiltElements, {
+    scale: 1.5,
+    glare: true,
+    "max-glare": 1,
+    reverse: true,
+  });
+  tiltElements.forEach((el) => {
+    // Get the computed transform from CSS (e.g., rotateZ(-30deg))
+    const computedTransform = getComputedStyle(el).transform;
+
+    // If it's not "none", apply it directly to inline style before VanillaTilt kicks in
+    if (computedTransform !== "none") {
+      el.style.transform = computedTransform;
+    }
+
+    // Save original transform to restore on mouseleave
+    el.dataset.originalTransform = computedTransform;
+  });
+
+  // After init, restore on mouseleave
+  tiltElements.forEach((el) => {
+    el.addEventListener("mouseleave", () => {
+      setTimeout(() => {
+        el.style.transform = el.dataset.originalTransform || "";
+      }, 0);
+    });
+  });
+}
+
+// Helper: destroy VanillaTilt on all .projimg
+function disableTilt() {
+  tiltElements.forEach((el) => {
+    if (el.vanillaTilt) {
+      el.vanillaTilt.destroy();
+      delete el.vanillaTilt;
+      // Restore original transform once more, in case destroy reset it
+      el.style.transform = el.dataset.originalTransform || "";
+    }
+  });
+}
+
+// Check current width and enable/disable accordingly
+function checkWidthAndToggleTilt() {
+  if (window.innerWidth >= 500) {
+    enableTilt();
+  } else {
+    disableTilt();
+  }
+}
+
+// Run once on page load
+checkWidthAndToggleTilt();
+
+// Re‐check whenever the window is resized
+window.addEventListener("resize", () => {
+  checkWidthAndToggleTilt();
 });
 
 //gsap
