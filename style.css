@@ -17,6 +17,9 @@ body,
   margin: 0;
   padding: 0;
 }
+body {
+  overflow-x: hidden;
+}
 h1 {
   font-family: "Medula One";
   font-size: 20vw;
@@ -241,7 +244,8 @@ h1 {
   height: 20vw;
 }
 #contacttext {
-  margin-top: 3vh;
+  margin-top: 10vh;
+  margin-left: 10vw;
   font-size: 3vh;
 
   height: 20vw;
@@ -252,22 +256,23 @@ h1 {
 .contact p {
   color: #406346;
   width: 40vw;
-  margin-top: 3vw;
+  margin-top: 0.5vw;
   margin-left: 5vw;
   font-family: "Kavoon", serif;
 }
 .circle1 {
-  height: 40vw;
-  width: 40vw;
+  height: 25vw;
+  width: 25vw;
   background-color: #2a4a4d;
   margin-left: 10vw;
+  margin-top: 5vw;
   border-radius: 50%;
   position: sticky;
   z-index: 101;
 }
 .circle2 {
-  height: 40vw;
-  width: 40vw;
+  height: 30vw;
+  width: 30vw;
   background-color: #2a4a4d;
   margin-left: 5vw;
   border-radius: 50%;
@@ -275,6 +280,115 @@ h1 {
   position: relative;
   top: -10vh;
   z-index: 101;
+}
+.icon {
+  width: 3vw;
+  height: auto;
+}
+
+.contactlink {
+  color: #2a4a4d !important;
+  margin-left: 1vw !important;
+}
+.email {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin-left: 5vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+.circle1 img {
+  width: 50vw;
+  height: auto;
+  position: relative;
+  right: -15vw;
+  bottom: 3vw;
+  transform: rotateZ(-55deg);
+  filter: saturate(75%);
+}
+#mask1 {
+  mask: url("images/mask_1.svg");
+  mask-size: 65vw;
+  mask-position: 0.2vw -1.2vw;
+  mask-repeat: no-repeat;
+  /* background-image: url("images/mask_1.svg");
+  background-size: 65vw;
+  background-position: 0.2vw -1.2vw; */
+  width: 70vw;
+  transform: translateX(-40vw);
+}
+
+.circle2 img {
+  width: 50vw;
+  height: auto;
+  position: relative;
+  right: 7vw;
+  top: 20vw;
+  transform: rotateZ(-60deg);
+  filter: saturate(75%);
+}
+#mask2 {
+  mask: url("images/mask_2.svg");
+  mask-size: 49vw;
+  mask-position: -0.3vw 2.8vw;
+  mask-repeat: no-repeat;
+  /* background-image: url("images/mask_2.svg");
+  background-size: 49vw;
+  background-position: -0.1vw 3vw; */
+  width: 70vw;
+  height: 60vw;
+  transform: translateY(-20vw);
+}
+#footer {
+  width: 100%;
+  height: 70vh;
+  background-color: #ed7368;
+  position: relative;
+}
+h3 {
+  font-family: "Fugaz One", sans-serif;
+  font-size: 10vw;
+  text-align: right;
+  font-weight: 100;
+  color: #fff;
+  position: sticky;
+  z-index: 101;
+  transform: rotate(20deg);
+  line-height: 10vw;
+  position: relative;
+  top: -5vw;
+  right: 5vw;
+}
+#footer img {
+  width: 30vh;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  z-index: 102;
+}
+#footer p {
+  position: absolute;
+  bottom: 10vh;
+  right: 20vw;
+  font-family: "Roboto", sans-serif;
+  font-size: 3vw;
+  color: #fff;
+  z-index: 101;
+  width: 30vw;
+  text-align: right;
 }
 #gallery {
   width: 100%;
@@ -362,6 +476,20 @@ h1 {
     right: calc(50% + (1300px * 0.365 - 650px));
   }
 }
+@media screen and (max-width: 800px) {
+  #contacttext {
+    /* top: -50vh !important; */
+  }
+  .contact {
+    height: 100vh !important;
+  }
+  #footer p {
+    font-size: 6vw !important;
+    bottom: 20vh !important;
+    right: 5vw !important;
+    width: 30vw !important;
+  }
+}
 
 @media screen and (max-width: 500px) {
   h1 {
@@ -434,63 +562,46 @@ h1 {
     width: 50vw;
     height: auto;
   }
+  #footer h3 {
+  }
 
   /* contact */
-
   .contact {
-    height: 100vh;
-    flex-shrink: 0;
-  }
-  .circle1 {
-    height: 35vw;
-    width: 35vw;
-    position: relative;
-    top: 17vh;
-  }
-  .circle2 {
-    height: 40vw;
-    width: 40vw;
-    position: relative;
-    top: 10vh;
-    left: 5vw;
-  }
-  .circle1 img {
-    width: 40vw;
-    height: auto;
-    position: relative;
-    top: calc(35vh - 40vw);
-    right: 5vw;
-  }
-  .circle2 img {
-    width: 30vw;
-    height: auto;
-    position: relative;
-    top: calc(30vh - 30vw);
-    border-radius: 0 0 15vw 15vw;
+    height: 120vh;
   }
   .contact h2 {
-    font-size: 25vw;
+    font-size: 20vw;
     margin-right: 0;
   }
-  #contacttext {
-    font-size: 5vw;
-    line-height: 6.5vw;
-  }
-  #contacttext #p1 {
+  #contactp1 {
     position: absolute;
-    top: -10vh;
-    left: -35vw;
+    top: -20vh;
+    left: -40vw;
+    width: 70vw;
   }
-  #contacttext #p2 {
+
+  .email {
     position: absolute;
-    top: 9vh;
-    left: -35vw;
-    width: 80vw;
+    top: -7vh;
+    left: -40vw;
+    width: 70vw;
   }
-  #contacttext #p3 {
-    position: absolute;
-    top: 25vh;
-    left: 10vw;
+  .icon {
+    width: 5vw;
+    height: auto;
+  }
+  li .icon {
+    margin-left: 4vw;
+  }
+  ul {
+    margin-top: 5vw;
+  }
+  .circle1 {
+    transform: scale(1.3) rotateZ(-10deg) translateY(5vh);
+  }
+  .circle2 {
+    top: 30vh;
+    transform: scale(1.5) rotateZ(-10deg) translateY(-2vh);
   }
   .container img {
     width: 50vw;
@@ -515,5 +626,59 @@ h1 {
   }
   #gallery {
     height: 490vw;
+  }
+  #footer {
+    width: 100%;
+    height: 50vh;
+    background-color: #ed7368;
+    position: relative;
+  }
+  h3 {
+    font-family: "Fugaz One", sans-serif;
+    font-size: 15vw;
+    text-align: right;
+    font-weight: 100;
+    color: #fff;
+    position: sticky;
+    z-index: 101;
+    transform: rotate(20deg);
+    line-height: 15vw;
+    position: relative;
+    top: 3vw;
+  }
+  #footer img {
+    width: 30vh;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    z-index: 102;
+  }
+  #footer p {
+    position: absolute;
+    bottom: 10vh !important;
+    right: 5vw;
+    font-family: "Roboto", sans-serif;
+    font-size: 5vw;
+    color: #fff;
+    z-index: 101;
+    width: 40vw;
+    text-align: right;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #footer h3 {
+    font-size: 8vw;
+    line-height: 8vw;
+    top: -5vw;
+    right: 5vw;
+  }
+  #footer img {
+    width: 60vh;
+  }
+  #footer p {
+    font-size: 2vw;
+    bottom: 7vh;
+    right: 20vw;
+    width: 40vw;
   }
 }
