@@ -3,7 +3,7 @@
   src: url(fonts/MedulaOne-Regular.ttf);
 }
 html {
-  filter: saturate(150%);
+  filter: saturate(120%);
 }
 #grain {
   width: 100%;
@@ -57,10 +57,12 @@ h1 {
 }
 .mainimage {
   position: absolute;
-  width: max(90vw, calc(90 * 13px));
+  width: max(80vw, calc(80 * 13px));
   height: auto;
-  bottom: min(-52vw, calc(-52 * 13px));
+  bottom: min(-50vw, calc(-50 * 13px));
+/*    left: max(9vw, calc(9 * 13px));*/
   pointer-events: none;
+    filter: saturate(120%);
 }
 .eyes {
   position: absolute;
@@ -214,27 +216,7 @@ h1 {
 .projects .img6 {
   transform: rotateZ(30deg);
 }
-#contact {
-  width: 100%;
-  height: 130vh;
-  background-color: #a6ebb5;
-  display: flex;
-  flex-wrap: wrap;
-}
-#contact h2 {
-  margin-top: 10vh;
-  color: #406346;
-}
-.circle {
-  background-color: #2a4a4d;
-}
-#circle1 {
-  width: 20vw;
-  height: 20vw;
-  border-radius: 50%;
-  margin-top: 25vh;
-  margin-left: 17vw;
-}
+
 .contact {
   width: 100%;
   height: 170vh;
