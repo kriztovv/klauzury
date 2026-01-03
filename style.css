@@ -59,7 +59,7 @@ h1 {
   position: absolute;
   width: max(80vw, calc(80 * 13px));
   height: auto;
-  bottom: min(-50vw, calc(-50 * 13px));
+  bottom: min(-10vw, calc(-10 * 13px));
 /*    left: max(9vw, calc(9 * 13px));*/
   pointer-events: none;
     filter: saturate(120%);
